@@ -144,6 +144,10 @@ Both designs synthesized on the same target device (xc7a35tcsg324-1) using Vivad
 | Slice Registers | 62 | 81 | +31% |
 | CP LUTs | 32 | 48 | +50% |
 | DP LUTs | 20 | 23 | +15% |
+| WNS (100 MHz clock) | 7.006 ns | 5.554 ns | −1.452 ns |
+| Critical Path Delay | 2.994 ns | 4.446 ns | +48% |
+| Total Power | 0.07 W | 0.07 W | — |
+| Dynamic Power | 0.001 W | 0.001 W | — |
 | ALU operations | 2 | 5 | — |
 | AR width | 16-bit | 17-bit | +1 bit |
 | opSel width | 1-bit | 3-bit | +2 bits |
@@ -188,28 +192,32 @@ The Radix-4 design uses more hardware to halve the number of clock cycles requir
 
 ```
 radix-4-booth-multiplier/
-├── ALU.v
-├── CONTROLPATH.v
-├── COUNTER.v
-├── DATAPATH.v
-├── DFLPOP.v
-├── PIPO.v
-├── PIPO17.v
-├── SHIFTREG_A.v
-├── SHIFTREG_Q.v
-├── TOP.v
-├── clk_constraint.xdc
-├── testBooth.v
-└── reports/
-    ├── simulation_waveform.png
-    ├── synthesis_schematic.png
-    ├── sim_schm_1.png
-    ├── sim_schm_2.png
-    ├── sim_tab.png
-    ├── utilization.png
-    ├── utilization_alt.png
-    ├── timing_summary.png
-    └── power.png
+├── src/
+│   ├── ALU.v
+│   ├── CONTROLPATH.v
+│   ├── COUNTER.v
+│   ├── DATAPATH.v
+│   ├── DFLPOP.v
+│   ├── PIPO.v
+│   ├── PIPO17.v
+│   ├── SHIFTREG_A.v
+│   ├── SHIFTREG_Q.v
+│   └── TOP.v
+├── sim/
+│   └── testBooth.v
+├── constraints/
+│   └── clk_constraint.xdc
+├── reports/
+│   ├── simulation_waveform.png
+│   ├── synthesis_schematic.png
+│   ├── sim_schm_1.png
+│   ├── sim_schm_2.png
+│   ├── sim_tab.png
+│   ├── utilization.png
+│   ├── utilization_alt.png
+│   ├── timing_summary.png
+│   └── power.png
+└── README.md
 ```
 
 ---
