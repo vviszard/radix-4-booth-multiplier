@@ -233,3 +233,4 @@ This project is the fourth in a series of multiplier implementations, each build
 - **Xilinx Vivado 2023.2** — Simulation, synthesis, timing and power analysis
 - **Target Device** — xc7a35tcsg324-1 (Artix-7 35T), out-of-context synthesis
 - **OS** — AlmaLinux
+- 
